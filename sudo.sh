@@ -25,13 +25,13 @@ LANG=$(locale | grep 'LANG=' | cut -d'=' -f2)
 #Set prompt and error messages
 #French messages
 if [[ $(echo $LANG | grep 'fr') ]];then
-	prompt_msg="[sudo] Mot de passe de $(whoami) :"
+	prompt_msg="[sudo] Mot de passe de $USER :"
 	fail_msg="Désolé, essayez de nouveau."
 	incorrect_msg="saisies de mots de passe incorrectes"
 #English messages
 #Make english the default language 
 else
-	prompt_msg="[sudo] password for $(whoami) :"
+	prompt_msg="[sudo] password for $USER :"
 	fail_msg="Sorry, try again."
 	incorrect_msg="incorrect password attempts"
 fi
